@@ -433,7 +433,7 @@ __attribute__((objc_subclassing_restricted))
         tempTextureDescriptor.textureType = MTLTextureType2DMultisample;
         tempTextureDescriptor.usage = MTLTextureUsageRenderTarget;
         if (@available(macCatalyst 14.0, macOS 11.0, *)) {
-            tempTextureDescriptor.storageMode = MTLStorageModeMemoryless;
+            tempTextureDescriptor.storageMode = 3;
         } else {
             NSAssert(NO, @"");
         }
